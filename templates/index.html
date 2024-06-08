@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="#home" class="logo">Rishav Kumar</a>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="{{ url_for('download_cv') }}" class="cv-download">Download CV</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <div class="home-content">
+                <div class="home-text">
+                    <h2 class="heading">Hi there,</h1>
+                        <h2 class="name">I am <span style="color: yellow;">Rishav Kumar Raj</span> </h1>
+                            <div class="typewriter">
+                                <h2>I am a <span class="typed-text"></span><span class="cursor"></span></h2>
+                            </div>
+                            <!-- <a href="{{ url_for('download_cv') }}" class="btn">Download CV</a> -->
+                </div>
+                <div class="home-image">
+                    <img src="{{ url_for('static', filename='images/mypic.jpeg') }}" alt="Rishav kumar"
+                        class="profile-image">
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="section-content">
+                <h2>About Me</h2>
+                <p>I am a passionate and driven individual with a strong background in computer science and software
+                    engineering. My goal is to create innovative and user-friendly solutions that solve real-world
+                    problems.</p>
+                <p>With a solid foundation in programming languages like Python, Java, and JavaScript, I have developed
+                    a wide range of skills, including web development and algorithm design. I am always eager to learn
+                    and stay up-to-date with the latest technologies and industry trends.</p>
+            </div>
+        </section>
+
+        <section id="skills">
+            <div class="section-content">
+                <h2>Skills</h2>
+                <div class="skill-grid">
+                    <div class="skill-item">
+                        <img src="{{ url_for('static', filename='images/html.png') }}" alt="Html">
+                    </div>
+                    <div class="skill-item">
+                        <img src="{{ url_for('static', filename='images/css.png') }}" alt="Css">
+                    </div>
+                    <div class="skill-item">
+                        <img src="{{ url_for('static', filename='images/js.jpg') }}" alt="JavaScript">
+                    </div>
+                    <div class="skill-item">
+                        <img src="{{ url_for('static', filename='images/nodeJs.png') }}" alt="Node.js">
+                    </div>
+                    <div class="skill-item">
+                        <img src="{{ url_for('static', filename='images/flask.png') }}" alt="Flask">
+                    </div>
+                    <div class="skill-item">
+                        <img src="{{ url_for('static', filename='images/python.jpg') }}" alt="Python">
+                    </div>
+                    <div class="skill-item">
+                        <img src="{{ url_for('static', filename='images/java.jpeg') }}" alt="Java">
+                    </div>
+                    <div class="skill-item">
+                        <img src="{{ url_for('static', filename='images/c.jpg') }}" alt="C">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education">
+            <div class="section-content">
+                <h2>Education</h2>
+                <div class="education-grid">
+                    <div class="education-item">
+                        <div class="education-details">
+                            <h3>Bachelor of Technology in Computer Science</h3>
+                            <p>Birla Institute of Technology-Mesra, 2022 - continued</p>
+                            <p>Relevant coursework: Data Structures, Algorithms, Software Engineering, Web Development, and Database Management.</p>
+                        </div>
+                    </div>
+                    <div class="education-item">
+                        <div class="education-details">
+                            <h3>Secondary Education</h3>
+                            <p>SKP Vidya Vihar, 2020-2022</p>
+                            <p>Focused on science and mathematics subjects.</p>
+                        </div>
+                    </div>
+                    <div class="education-item">
+                        <div class="education-details">
+                            <h3>Online Courses</h3>
+                            <p>Completed various online courses on web development, machine learning, and data analysis.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="section-content">
+                <h2>Projects</h2>
+                <div class="project-grid">
+                    <div class="project" style="background-image: url('../static/images/stopwatch.jpeg');">
+                        <div class="project-details">
+                            <h3>Stopwatch</h3>
+                            <p>A sleek fully functional stopwatch with start/stop, reset, laps options.</p>
+                            <a href="https://github.com/Risha-v/PRODIGY_WD_02/tree/master" target="_blank">GitHub Repo</a>
+                        </div>
+                    </div>
+                    <div class="project" style="background-image: url('../static/images/todo.jpeg');">
+                        <div class="project-details">
+                            <h3>To-do List</h3>
+                            <p>User can add their tasks, give descriptions. Incomplete tasks are in the pending list, and completed tasks are in the completed list.</p>
+                            <a href="https://github.com/Risha-v/OIBSIP-LEVEL3" target="_blank">GitHub Repo</a>
+                        </div>
+                    </div>
+                    <div class="project" style="background-image: url('../static/images/tictactoe.jpg');">
+                        <div class="project-details">
+                            <h3>Tic Tac Toe</h3>
+                            <p>A fun and interactive game with two modes: "Play with computer" (featuring easy and hard levels) and "Play with friends."</p>
+                            <a href="https://github.com/Risha-v/PRODIGY_WD_03/tree/master" target="_blank">GitHub Repo</a>
+                        </div>
+                    </div>
+                    <div class="project" style="background-image: url('../static/images/login.png');">
+                        <div class="project-details">
+                            <h3>User Authentication App</h3>
+                            <p>Gives users the facility to register, log in, and access a secure page. It stores data (like passwords) in encrypted form to make it more robust.</p>
+                            <a href="https://github.com/Risha-v/OIBSIP-LEVEL4/tree/master" target="_blank">GitHub Repo</a>
+                        </div>
+                    </div>
+                    <div class="project" style="background-image: url('../static/images/weather.jpeg');">
+                        <div class="project-details">
+                            <h3>Weather App</h3>
+                            <p>Fetches real-time data from a third-party API and shows the temperature, humidity, wind speed, and pressure. Based on the results, it gives some tips.</p>
+                            <a href="https://github.com/Risha-v/PRODIGY_WD_05/tree/master" target="_blank">GitHub Repo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="section-content">
+                <h2>Contact Me</h2>
+                <div class="contact-info">
+                    <a href="mailto:rishavkumar.7907@gmail.com" class="contact-item">
+                        <div class="icon-container">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <span>EMAIL</span>
+                    </a>
+                    <a href="https://instagram.com/rishav._.88" class="contact-item">
+                        <div class="icon-container">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <span>INSTAGRAM</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/contactrishavkumar" target="_blank" class="contact-item">
+                        <div class="icon-container">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <span>LINKEDIN</span>
+                    </a>
+                    <a href="https://wa.me/9142894203" target="_blank" class="contact-item">
+                        <div class="icon-container">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <span>WHATSAPP</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>
